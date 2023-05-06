@@ -6,6 +6,8 @@ from selenium.webdriver.common.keys import Keys
 
 DOWNLOAD = 40.00
 UPLOAD = 40.00
+YOUR_USERNAME = ''
+YOUR_PASSWORD = ''
 
 
 class InternetSpeedTwitterBot:
@@ -40,11 +42,11 @@ class InternetSpeedTwitterBot:
 
         time.sleep(3)
         user = self.driver.find_element(By.NAME, 'text')
-        user.send_keys('khemcp98', Keys.ENTER)
+        user.send_keys(YOUR_USERNAME, Keys.ENTER)
 
         time.sleep(3)
         password = self.driver.find_element(By.NAME, 'password')
-        password.send_keys('khem@1998', Keys.ENTER)
+        password.send_keys(YOUR_PASSWORD, Keys.ENTER)
 
         time.sleep(3)
         tweet = self.driver.find_element(By.XPATH,
